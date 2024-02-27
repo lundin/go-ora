@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
+	"log"
 	"github.com/sijms/go-ora/v2/advanced_nego"
 	"github.com/sijms/go-ora/v2/converters"
 	"github.com/sijms/go-ora/v2/network"
@@ -114,6 +114,10 @@ func NewConnector(connString string) driver.Connector {
 }
 func (driver *OracleDriver) OpenConnector(connString string) (driver.Connector, error) {
 	// create hash from connection string
+    log.Println("standard logger")
+
+fmt.Println("HEEELLLLO")
+
 	return &OracleConnector{drv: driver, connectString: connString}, nil
 }
 
