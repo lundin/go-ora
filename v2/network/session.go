@@ -22,6 +22,13 @@ import (
 	"github.com/sijms/go-ora/v2/converters"
 )
 
+
+func init() {
+
+fmt.Println("INIT NETWORK")
+
+}
+
 //var ErrConnectionReset error = errors.New("connection reset")
 
 var read_buffer_size = 0x4000
