@@ -873,10 +873,10 @@ func (session *Session) writePacket(pck PacketInterface) error {
 	tracer := session.Context.ConnOption.Tracer
 	tmp := pck.bytes()
 	tracer.LogPacket("Write packet:", tmp)
-	var err = session.initWrite()
-	if err != nil {
-		return err
-	}
+	//var err = session.initWrite()
+	//if err != nil {
+	//	return err
+	//}
 	if session.sslConn != nil {
 		_, err = session.sslConn.Write(tmp)
 	} else if session.conn != nil {
@@ -913,10 +913,10 @@ func (session *Session) readAll(size int) error {
 	var temp int
 	session.remainingBytes = size
 	for index < size {
-		err = session.initRead()
-		if err != nil {
-			return err
-		}
+		//err = session.initRead()
+		//if err != nil {
+		//	return err
+		//}
 		temp, err = session.reader.Read(tempBuffer[index:])
 		if err != nil {
 			if temp > 0 {
