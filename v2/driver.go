@@ -42,6 +42,7 @@ type GetDriverInterface interface {
 }
 
 func init() {
+	fmt.Println("Lundin init")
 	sql.Register("oracle", oracleDriver)
 }
 
@@ -57,6 +58,7 @@ func NewDriver() *OracleDriver {
 }
 
 func (driver *OracleDriver) init(conn *Connection) error {
+fmt.Println("Start")
 	driver.mu.Lock()
 	defer driver.mu.Unlock()
 	if !driver.dataCollected {
