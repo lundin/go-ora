@@ -1,5 +1,5 @@
 # go-ora
-# Pure golang oracle client
+# pure golang oracle client
 
 ## note:
 ###### the original oracle drivers are very complex and contains many features which are difficult to add them at one time
