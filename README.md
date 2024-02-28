@@ -20,7 +20,7 @@
 # How To Use this
 ## Connect to Database
 * ### Simple Connection
-  this connection require server name or IP, port, service name, username and password
+  This connection require server name or IP, port, service name, username and password
   * using database/sql
   ```golang
   port := 1521
