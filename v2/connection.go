@@ -118,7 +118,7 @@ func (driver *OracleDriver) OpenConnector(connString string) (driver.Connector, 
 
 fmt.Println("HEEELLLLO")
 
-	return &OracleConnector{drv: driver, connectString: connString}, nil
+	//return &OracleConnector{drv: driver, connectString: connString}, nil
 }
 
 func (connector *OracleConnector) Connect(ctx context.Context) (driver.Conn, error) {
